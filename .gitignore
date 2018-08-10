@@ -15,3 +15,14 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+/public
+
+/react/app/config/secrets.yml
+/react/app/config/database.yml
+
+/config/secrets.yml
+/config/database.yml
+
+react-rails_api-todo/react/app/config/database.yml
+react-rails_api-todo/react/app/config/secrets.yml
