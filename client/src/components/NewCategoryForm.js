@@ -16,6 +16,10 @@ const NewCategoryForm = ({onNewCategory = f => f}) => {
           ref={input => name = input}
           type="text"
           placeholder="Add category..." required />
+        <input className="input-project center-block"
+          ref={input => description = input}
+          type="text"
+          placeholder="Add description..." required />
         <button className="add center-block add-project">Add Category</button>
       </form>
     </div>

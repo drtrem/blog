@@ -97,7 +97,7 @@ h2{
     line-height: 60px;
     color: #000;
 }
-.check-task a{
+.check-taska{
     float: right;
 }
 .check-task img {
@@ -159,7 +159,15 @@ div[class=react-datepicker__input-container] input:focus {
     color: #fff;
 }
 
+.colorblack{
+    color: #000;
+}
+
 .app{
   margin-top: 55px;
   margin-left: 55px;
+}
+
+span{
+  padding-left: 10px;
 }

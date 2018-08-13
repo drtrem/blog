@@ -18,6 +18,7 @@ class CategoryList extends Component {
               <div className="category col-lg-offset-2 col-lg-8 task">
                 <img src="img/icon-top.png" alt=""/>
                 <span className="colorwhite"><Link className="colorwhite" to="categories/${category.id}">{category.name}</Link></span>
+                <span className="colorwhite">{category.description}</span>
                 <a onClick={() => this.props.removeCategory(category.id)} className="delete-button-top taska"><img src="img/delete-top.png" alt=""/></a>
                 <a onClick={() => this.props.editingCategory(category.id)} className="edit-button-top taska"><img src="img/edit-top.png" alt=""/></a>
               </div>

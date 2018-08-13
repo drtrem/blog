@@ -8,9 +8,8 @@ import MainLayout from './components/main-layout';
 // Pages
 import Home from './components/home';
 import CategoriesContainer from './components/category-container';
-import CategoryList from './components/category-list';
 import Category from './components/category';
-import PostList from './components/post-list';
+import PostsContainer from './components/post-container';
 import Post from './components/post';
 
 const Routers = () => (
@@ -28,7 +27,7 @@ const Routers = () => (
       </Route>
 
       <Route path="posts">
-        <IndexRoute component={PostList} />
+        <IndexRoute component={PostsContainer} />
         <Route path=":postId" component={Post} />
       </Route>
     </Route>
