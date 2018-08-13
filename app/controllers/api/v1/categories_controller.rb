@@ -19,7 +19,7 @@ module Api::V1
       @category = Category.new(category_params)
 
       if @category.save
-        render json: @category, status: :created, location: @category
+        render json: @category, status: :created
       else
         render json: @category.errors, status: :unprocessable_entity
       end
@@ -37,6 +37,11 @@ module Api::V1
     # DELETE /categories/1
     def destroy
       @category.destroy
+      if @category.destroy
+        head :no_content, status: :ok
+      else
+        render json: @category.errors, status: :unprocessable_entity
+      end      
     end
 
     private

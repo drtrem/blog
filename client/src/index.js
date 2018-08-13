@@ -1,8 +1,17 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import { composeWithDevTools } from 'redux-devtools-extension'
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import reducers from './reducers'
+import Routers from './router';
+import thunk from 'redux-thunk'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
+
+ReactDOM.render(<Provider store={store}><Routers /></Provider>, document.getElementById('root'));
 registerServiceWorker();
+
+export default store;
