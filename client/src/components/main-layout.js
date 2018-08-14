@@ -10,7 +10,6 @@ class MainLayout extends Component {
           <ul>
             <li><Link to="/" activeClassName="active">Home</Link></li>
             <li><Link to="/categories" activeClassName="active">Category</Link></li>
-            <li><Link to="/posts" activeClassName="active">Posts</Link></li>
           </ul>
         </aside>
         <main>

@@ -1,12 +1,12 @@
 import React from 'react';
 
-const NewPostForm = ({onNewPost = f => f}) => {
+const NewPostForm = ({onNewPost = f => f, categoryId}) => {
   let name
   let content
   let file
   const submit = e => {
     e.preventDefault()
-    onNewPost(name.value, content.value, file.value)
+    onNewPost(categoryId, name.value, content.value, file.value)
     name.value = ''
     content.value = ''
     file.value = ''

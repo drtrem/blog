@@ -1,17 +1,18 @@
 import axios from 'axios';
 import store from '../index';
 import { getPostsSuccess, setPostSuccess, removePostSuccess, editingPostSuccess, editPostSuccess} from '../actions/postActions';
+import _ from 'lodash';
 
-export function getPosts() {
+export function getPosts(category_id) {
   return axios.get('/api/v1/posts.json')
     .then(response => {
-      store.dispatch(getPostsSuccess(response.data));
+      store.dispatch(getPostsSuccess(_.filter(response.data, post => category_id == post.category_id)));
     })
     .catch((error) => {console.log(error)})
 }
 
-export function addNewPost(name, content, file) {
-  axios.post( '/api/v1/posts', { post: {name, content, file} })
+export function addNewPost(category_id, name, content, file) {
+  axios.post( '/api/v1/posts', { post: {category_id, name, content, file} })
   .then(response => {
     store.dispatch(setPostSuccess(response.data));
   })

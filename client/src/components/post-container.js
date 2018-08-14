@@ -17,7 +17,7 @@ class PostsContainer extends Component {
           posts={this.props.posts}
           editingPostId={this.props.editingPostId} 
           categoryId={this.props.categoryId}/>
-        <NewPostForm onNewPost={postApi.addNewPost} id={this.props.id} />
+        <NewPostForm onNewPost={postApi.addNewPost} categoryId={this.props.categoryId}/>
       </div>
     )
   }

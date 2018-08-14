@@ -47,7 +47,7 @@ module Api::V1
 
       # Only allow a trusted parameter "white list" through.
       def post_params
-        params.require(:post).permit(:name, :content, :file)
+        params.require(:post).permit(:category_id, :name, :content, :file)
       end
   end
 end
