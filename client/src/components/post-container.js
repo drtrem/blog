@@ -6,7 +6,7 @@ import NewPostForm from './NewPostForm';
 
 class PostsContainer extends Component {
   componentDidMount() {
-    postApi.getPosts();
+    postApi.getPosts(this.props.categoryId);
   }
 
   render() {
@@ -15,7 +15,8 @@ class PostsContainer extends Component {
         <PostList
           id={this.props.id}
           posts={this.props.posts}
-          editingPostId={this.props.editingPostId} />
+          editingPostId={this.props.editingPostId} 
+          categoryId={this.props.categoryId}/>
         <NewPostForm onNewPost={postApi.addNewPost} id={this.props.id} />
       </div>
     )
@@ -30,3 +31,4 @@ const mapStateToProps = function(store) {
 };
 
 export default connect(mapStateToProps)(PostsContainer); 
+ 

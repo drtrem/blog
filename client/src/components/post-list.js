@@ -17,7 +17,8 @@ class PostList extends Component {
               return ( 
                 <div className = "row justify-content-center" key={post.id}>
                   <li className = "list-group-item col-xl-5" key = {post.id}>
-                    <Link className = "row justify-content-center" to = {`/categories/${post.id}`}>
+                    <Link className = "row justify-content-center" to = {`/posts/${post.id}/${post.name}/${post.content}`}>
+
                       Post name:{post.name}
                     </Link>
                     <br/>

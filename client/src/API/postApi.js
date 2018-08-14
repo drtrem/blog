@@ -27,7 +27,6 @@ export function removePost(id) {
 }
 
 export function editPost(id, name, content, file) { 
-  console.log(id, name, content, file);
   axios.put( '/api/v1/posts/' + id, { post: {name, content, file} })
   .then((response) => {
     store.dispatch(editPostSuccess(response.data));

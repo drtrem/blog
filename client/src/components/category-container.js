@@ -8,7 +8,6 @@ import * as postApi from '../API/postApi';
 class CategoriesContainer extends Component {
   componentDidMount() {
     categoryApi.getCategories();
-    postApi.getPosts();
   }
 
   render() {

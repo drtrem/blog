@@ -18,17 +18,14 @@ const Routers = () => (
   <Router history={browserHistory}>
     <Route component={MainLayout}>
       <Route path="/" component={Home} />
-
       <Route path="categories">
         <IndexRoute component={CategoriesContainer} />
         <Route path=":categoryId" component={Category}>
-        
         </Route>
       </Route>
-
       <Route path="posts">
         <IndexRoute component={PostsContainer} />
-        <Route path=":postId" component={Post} />
+        <Route path=":postId/:postName/:postContent" component={Post} />
       </Route>
     </Route>
   </Router>
