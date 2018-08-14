@@ -6,8 +6,8 @@ class EditPostForm extends Component {
       this.state = {
         id: this.props.post.id,
         name: this.props.post.name,
-        status: this.props.post.status,
-        project_id: this.props.post.project_id
+        content: this.props.post.content || '',
+        file: this.props.post.file || ''
       }
       this.handleChange = this.handleChange.bind(this)
       this.handleSubmit = this.handleSubmit.bind(this)
@@ -17,21 +17,30 @@ class EditPostForm extends Component {
   }
   handleSubmit(e){
     e.preventDefault();
-    const { id, name, status, project_id } = this.state;
-    this.props.editPost(id, name, status, project_id);
+    const { id, name, content, file } = this.state;
+    this.props.editPost(id, name, content, file);
   }
   
   render(){
     return(
-      <div className="col-lg-offset-2 col-lg-8 task-change">
-        <form className="change-task inputtop" onSubmit={this.handleSubmit}>
-          <input  name="name"
-            className="edit-task-input"
+      <div className="row justify-content-center">
+        <form onSubmit={this.handleSubmit}>
+          <input name="name"
+            className="form-control"
             type="text"
             placeholder="Title..."
             value={this.state.name}
             onChange={this.handleChange} required />
-          <button className="add-task-btn-task">Update Post</button>
+          <textarea name="content" 
+            className="form-control"
+            id="exampleFormControlTextarea1" 
+            rows="3" 
+            placeholder="Content..." 
+            value={this.state.content} 
+            onChange={this.handleChange} 
+            required></textarea>
+          <br/>
+          <button className="form-control btn btn-primary">Update Post</button>
         </form> 
       </div>
     )
@@ -39,4 +48,4 @@ class EditPostForm extends Component {
 }
 
 export default EditPostForm;
- 
+  

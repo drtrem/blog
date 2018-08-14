@@ -8,6 +8,7 @@ import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers'
 import Routers from './router';
 import thunk from 'redux-thunk'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
 

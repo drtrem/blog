@@ -13,14 +13,16 @@ class CategoriesContainer extends Component {
 
   render() {
     return (
-      <div className="projects-container">
-        <CategoryList 
-          categories={this.props.categories}
-          oneditingCategoryId={this.props.editingCategoryId}
-          removeCategory={categoryApi.removeCategory} 
-          editCategory={categoryApi.editCategory} 
-          editingCategory={categoryApi.editingCategory} />
-        <NewCategoryForm onNewCategory={categoryApi.addNewCategory} />
+      <div className="container-fluid">
+        <ul className = "list-group">
+          <CategoryList 
+            categories={this.props.categories}
+            oneditingCategoryId={this.props.editingCategoryId}
+            removeCategory={categoryApi.removeCategory} 
+            editCategory={categoryApi.editCategory} 
+            editingCategory={categoryApi.editingCategory} />
+          <NewCategoryForm onNewCategory={categoryApi.addNewCategory} />
+        </ul>
       </div>
     )
   }

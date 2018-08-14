@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 class Home extends Component {
   render() {
     return (
-      <div className="home-page">
-        <h1>Тестове завдання</h1>
-        <p>
+      <div className="home-page row justify-content-center">
+        <h1 className="list-group-item col-xl-7 text-center">Тестове завдання</h1>
+        <br/>
+        <p className="list-group-item col-xl-7">
 При вирішенні завдання використовуйте Ruby on Rails + React + Redux + React-router + WebSockets + Background jobs processing + Responsive front-end component library.
 Реалізація та вибір бібліотек на власний розсуд. Якщо з чимось не працювали, реалізовуйте як вмієте, можна опустити частину функціоналу.
 

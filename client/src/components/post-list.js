@@ -11,21 +11,30 @@ class PostList extends Component {
           return (<EditPostForm 
             post={post} 
             key={post.id} 
-            editTask={postApi.editPost}/>)
+            editPost={postApi.editPost}/>)
         } else {
             if (post.project_id === this.props.id) {
-              return (  
-                <div className="single-task" key={post.id}>
-                  <div className="col-lg-offset-2 col-lg-8 task">
-                    <form autoComplete="off">
-                      <span><Link className="colorblack" to="categories/${category.id}">{post.name}</Link></span>
-                      <span>{post.content}</span>
-                      <a onClick={() => postApi.removePost(post.id)} className="delete-button check-taska"><img src="img/delete.png" alt=""/></a>
-                      <a onClick={() => postApi.editingPost(post.id)} className="edit-button check-taska"><img src="img/edit.png" alt=""/></a>
-                      <a onClick={() => postApi.editingPost(post.id)} className="edit-button check-taska"><img src="img/disk.png" alt=""/></a>
-                    </form>
-                  </div>
-                </div>);
+              return ( 
+                <div className = "row justify-content-center" key={post.id}>
+                  <li className = "list-group-item col-xl-5" key = {post.id}>
+                    <Link className = "row justify-content-center" to = {`/categories/${post.id}`}>
+                      Post name:{post.name}
+                    </Link>
+                    <br/>
+                    <span>Content: {post.content}</span>
+                    <br/>
+                    <span>File: {post.file}</span>
+                    <br/>
+                    <span className = "float-right">
+                      <a onClick={() => postApi.editingPost(post.id)} className="btn btn-primary">Edit</a>
+                      <a onClick={() => postApi.removePost(post.id)} className="btn btn-danger">Delete</a>
+                    </span>
+                  </li> 
+                </div>
+
+
+
+              );
             }
           }
       })

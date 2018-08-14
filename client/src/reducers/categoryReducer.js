@@ -27,7 +27,8 @@ const categoryReducer = function(state = initialState, action) {
 
       const updatedCategories = state.categories.map(category => {
         if(category.id === action.categoryId){
-          return { ...category, name: action.categoryName }
+          return { ...category, name: action.categoryName, description: action.categoryDescription,
+           }
         }
         return category
       })

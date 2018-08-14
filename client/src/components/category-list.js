@@ -14,14 +14,19 @@ class CategoryList extends Component {
           )
         } else {
           return (
-            <div key={category.id}>
-              <div className="category col-lg-offset-2 col-lg-8 task">
-                <img src="img/icon-top.png" alt=""/>
-                <span className="colorwhite"><Link className="colorwhite" to="categories/${category.id}">{category.name}</Link></span>
-                <span className="colorwhite">{category.description}</span>
-                <a onClick={() => this.props.removeCategory(category.id)} className="delete-button-top taska"><img src="img/delete-top.png" alt=""/></a>
-                <a onClick={() => this.props.editingCategory(category.id)} className="edit-button-top taska"><img src="img/edit-top.png" alt=""/></a>
-              </div>
+            <div className = "row justify-content-center" key={category.id}>
+              <li className = "list-group-item col-xl-5" key = {category.id}>
+                <Link className = "row justify-content-center" to = {`/categories/${category.id}`}>
+                  Category:{category.name}
+                </Link>
+                <br/>
+                <span>Description: {category.description}</span>
+                <br/>
+                <span className = "float-right">
+                  <a onClick={() => this.props.editingCategory(category.id)} className="btn btn-primary">Edit</a>
+                  <a onClick={() => this.props.removeCategory(category.id)} className="btn btn-danger">Delete</a>
+                </span>
+              </li> 
             </div>
           )
         }

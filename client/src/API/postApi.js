@@ -10,8 +10,8 @@ export function getPosts() {
     .catch((error) => {console.log(error)})
 }
 
-export function addNewPost(project_id, name, status) {
-  axios.post( '/api/v1/posts', { post: {project_id, name, status} })
+export function addNewPost(name, content, file) {
+  axios.post( '/api/v1/posts', { post: {name, content, file} })
   .then(response => {
     store.dispatch(setPostSuccess(response.data));
   })
@@ -26,8 +26,9 @@ export function removePost(id) {
   .catch((error) => {console.log(error)})
 }
 
-export function editPost(id, name, status, project_id, date) { 
-  axios.put( '/api/v1/posts/' + id, { post: {name, status, date} })
+export function editPost(id, name, content, file) { 
+  console.log(id, name, content, file);
+  axios.put( '/api/v1/posts/' + id, { post: {name, content, file} })
   .then((response) => {
     store.dispatch(editPostSuccess(response.data));
     store.dispatch(editingPostSuccess(null));

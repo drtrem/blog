@@ -5,15 +5,18 @@ import * as postApi from '../API/postApi';
 import NewPostForm from './NewPostForm';
 
 class PostsContainer extends Component {
+  componentDidMount() {
+    postApi.getPosts();
+  }
 
   render() {
     return (
       <div className="tasks-container">
-        <NewPostForm onNewPost={postApi.addNewPost} id={this.props.id} />
         <PostList
           id={this.props.id}
           posts={this.props.posts}
           editingPostId={this.props.editingPostId} />
+        <NewPostForm onNewPost={postApi.addNewPost} id={this.props.id} />
       </div>
     )
   }

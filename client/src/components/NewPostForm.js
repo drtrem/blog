@@ -1,25 +1,35 @@
 import React from 'react';
 
-const NewPostForm = ({id, onNewPost = f => f}) => {
+const NewPostForm = ({onNewPost = f => f}) => {
   let name
+  let content
+  let file
   const submit = e => {
     e.preventDefault()
-    onNewPost(id, name.value)
+    onNewPost(name.value, content.value, file.value)
     name.value = ''
+    content.value = ''
+    file.value = ''
     name.focus()
   }
 
   return (
-    <div className="col-lg-offset-2 col-lg-8">
+    <div className="row justify-content-center">
       <form onSubmit={submit}>
-        <input className="input-project center-block"
+        <input
+          className = "form-control"
           ref={input => name = input}
           type="text"
-          placeholder="Add post..." required />
-        <button className="add center-block add-project">Add Post</button>
+          placeholder="Name post..." required />
+        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Content..." required ref={input => content = input}></textarea>
+        <br/>
+        <input type="file" className="form-control-file" id="exampleFormControlFile1" ref={input =>file = input}></input>
+        <br/>
+        <button className="form-control btn btn-primary">Add Post</button>
       </form>
     </div>
   )
 }
 
 export default NewPostForm;
+     

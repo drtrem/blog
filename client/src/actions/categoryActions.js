@@ -29,10 +29,11 @@ export function editingCategorySuccess(categoryId) {
 }
 
 
-export function editCategorySuccess(categoryId, categoryName) {
+export function editCategorySuccess(categoryId, categoryName, categoryDescription) {
   return {
     type: types.EDIT_CATEGORY_SUCCESS,
     categoryId,
-    categoryName
+    categoryName,
+    categoryDescription
   };
 }

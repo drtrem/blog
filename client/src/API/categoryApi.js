@@ -10,8 +10,8 @@ export function getCategories() {
     .catch((error) => {console.log(error)})
 }
 
-export function addNewCategory(name) {
-  axios.post( '/api/v1/categories', { category: {name} })
+export function addNewCategory(name, description) {
+  axios.post( '/api/v1/categories', { category: {name, description} })
   .then(response => {
     store.dispatch(setCategorySuccess(response.data));
   })
@@ -26,10 +26,10 @@ export function removeCategory(id) {
   .catch((error) => {console.log(error)})
 }
 
-export function editCategory(id, name) {
-  axios.put( '/api/v1/categories/' + id, { category: {name} })
+export function editCategory(id, name, description) {
+  axios.put( '/api/v1/categories/' + id, { category: {name, description} })
   .then((response) => {
-    store.dispatch(editCategorySuccess(response.data.id, response.data.name));
+    store.dispatch(editCategorySuccess(response.data.id, response.data.name, response.data.description));
     store.dispatch(editingCategorySuccess(null));
   })
   .catch((error) => {console.log(error)})

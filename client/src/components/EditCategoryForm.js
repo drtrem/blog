@@ -5,7 +5,8 @@ class EditCategoryForm extends Component {
     super(props)
     this.state = {
       id: this.props.category.id,
-      name: this.props.category.name
+      name: this.props.category.name,
+      description: this.props.category.description || ''
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -15,21 +16,29 @@ class EditCategoryForm extends Component {
   }
   handleSubmit(e){
     e.preventDefault();
-    const { id, name } = this.state;
-    this.props.editCategory(id, name);
+    const { id, name, description } = this.state;
+    this.props.editCategory(id, name, description);
   }
   
   render(){
     return(
-      <div className="col-lg-offset-2 col-lg-8 task">
-        <form className="change-project inputtop" onSubmit={this.handleSubmit}>
-          <input  name="name"
-            className="change-project-input"
+      <div className = "row justify-content-center">
+        <form onSubmit={this.handleSubmit}>
+          <input name="name"
+            className = "form-control"
             type="text"
-            placeholder="Title..."
+            placeholder="Name..."
             value={this.state.name}
             onChange={this.handleChange} required/>
-          <button className="add-task-btn edit">Update Category</button>
+          <textarea name="description" 
+            className="form-control" 
+            id="exampleFormControlTextarea1" 
+            rows="3" 
+            placeholder="Description..." 
+            value={this.state.description} 
+            onChange={this.handleChange} 
+            required></textarea>
+          <button className=" form-control btn btn-primary">Update Category</button>
         </form> 
       </div>
     )
