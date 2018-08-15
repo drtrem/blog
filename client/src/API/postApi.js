@@ -39,3 +39,24 @@ export function editPost(id, name, content, file) {
 export function editingPost(id) {
   store.dispatch(editingPostSuccess(id));
 }
+
+  export  function validate (name, description) { 
+    const errors = [];
+    if ( ( ((/(^)([A-ZА-Я][A-ZА-Яa-zа-я])/g).test(name)) ) === false ) {
+      errors.push("Мінімум 2 слова по 2 літери, перше слово з великої літери");
+    }
+
+    if ( ((/\./g).test(name)) === false ) {
+      errors.push("Має включати ‘.’");
+    }
+
+    if ( ((/(\s+)/g).test(name)) === false ) {
+      errors.push("Має включати ‘ ’");
+    }
+    
+    if (description.length === 0) {
+      errors.push("Має включати description");
+    }
+
+    return errors;
+  }

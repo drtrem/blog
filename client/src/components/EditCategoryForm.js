@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'; 
+import * as postApi from '../API/postApi';
 
 class EditCategoryForm extends Component {
   constructor(props) {
@@ -6,7 +7,8 @@ class EditCategoryForm extends Component {
     this.state = {
       id: this.props.category.id,
       name: this.props.category.name,
-      description: this.props.category.description || ''
+      description: this.props.category.description,
+      errors: []
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -17,13 +19,26 @@ class EditCategoryForm extends Component {
   handleSubmit(e){
     e.preventDefault();
     const { id, name, description } = this.state;
+    const errors = postApi.validate(this.state.name, this.state.description);
+    if (errors.length > 0) {
+      this.setState({ errors });
+      return;
+    }
     this.props.editCategory(id, name, description);
+    this.state.name = ''
+    this.state.description = ''
+    this.state.errors = []
+    name.focus()
   }
   
   render(){
+    const { errors } = this.state;
     return(
       <div className = "row justify-content-center">
         <form onSubmit={this.handleSubmit}>
+          {errors.map(error => (
+            <p className='text-danger' key={error}>Error: {error}</p>
+          ))}
           <input name="name"
             className = "form-control"
             type="text"

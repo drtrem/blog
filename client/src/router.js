@@ -25,7 +25,7 @@ const Routers = () => (
       </Route>
       <Route path="posts">
         <IndexRoute component={PostsContainer} />
-        <Route path=":postId/:postName/:postContent" component={Post} />
+        <Route path=":postId/:postName/:postContent/:postFile" component={Post} />
       </Route>
     </Route>
   </Router>

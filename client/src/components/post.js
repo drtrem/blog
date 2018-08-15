@@ -11,6 +11,8 @@ class Post extends Component {
                 <br/>
                 <span>Content: {this.props.params.postContent}</span>
                 <br/>
+                <span>Content: {this.props.params.postFile}</span>
+                <br/>
               </li> 
             </div>
       );

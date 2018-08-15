@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as postApi from '../API/postApi';
 
 class EditPostForm extends Component {
   constructor(props) {
@@ -6,8 +7,9 @@ class EditPostForm extends Component {
       this.state = {
         id: this.props.post.id,
         name: this.props.post.name,
-        content: this.props.post.content || '',
-        file: this.props.post.file || ''
+        content: this.props.post.content,
+        file: this.props.post.file,
+        errors: []
       }
       this.handleChange = this.handleChange.bind(this)
       this.handleSubmit = this.handleSubmit.bind(this)
@@ -18,13 +20,25 @@ class EditPostForm extends Component {
   handleSubmit(e){
     e.preventDefault();
     const { id, name, content, file } = this.state;
+    const errors = postApi.validate(this.state.name, this.state.content);
+    if (errors.length > 0) {
+      this.setState({ errors });
+      return;
+    }
     this.props.editPost(id, name, content, file);
+    this.state.name = ''
+    this.state.content = ''
+    this.state.errors = []
   }
   
   render(){
+    const { errors } = this.state;
     return(
       <div className="row justify-content-center">
         <form onSubmit={this.handleSubmit}>
+          {errors.map(error => (
+            <p className='text-danger' key={error}>Error: {error}</p>
+          ))}
           <input name="name"
             className="form-control"
             type="text"
@@ -48,4 +62,4 @@ class EditPostForm extends Component {
 }
 
 export default EditPostForm;
-  
+   
