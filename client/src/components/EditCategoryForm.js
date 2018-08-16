@@ -28,7 +28,6 @@ class EditCategoryForm extends Component {
     this.state.name = ''
     this.state.description = ''
     this.state.errors = []
-    name.focus()
   }
   
   render(){
