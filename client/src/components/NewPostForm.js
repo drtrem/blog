@@ -42,7 +42,6 @@ class NewPostForm extends Component {
     fd.append('category_id', this.props.categoryId);
     console.log(fd)
     this.state.file = fd
-
   }
   
   render(){

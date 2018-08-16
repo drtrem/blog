@@ -9,10 +9,12 @@ class EditPostForm extends Component {
         name: this.props.post.name,
         content: this.props.post.content,
         file: this.props.post.file,
+        files: null,
         errors: []
       }
       this.handleChange = this.handleChange.bind(this)
       this.handleSubmit = this.handleSubmit.bind(this)
+      this.readFile = this.readFile.bind(this)
   }
   handleChange = (e) => {
     this.setState({[e.target.name]: e.target.value})
@@ -20,15 +22,25 @@ class EditPostForm extends Component {
   handleSubmit(e){
     e.preventDefault();
     const { id, name, content, file } = this.state;
-    const errors = postApi.validate(this.state.name, this.state.content);
+    const errors = postApi.validate(this.state.name, this.state.content, this.state.files);
     if (errors.length > 0) {
       this.setState({ errors });
       return;
     }
-    this.props.editPost(id, name, content, file);
+    this.props.editPost(id, this.state.name, this.state.content, this.state.file);
     this.state.name = ''
     this.state.content = ''
+    this.state.file = null
     this.state.errors = []
+  }
+  readFile(e){
+    e.preventDefault()
+    let fd = new FormData();
+    this.state.files = e.target.files[0]
+    fd.append('file', e.target.files[0]);
+    fd.append('name', this.state.name);
+    fd.append('content', this.state.content);
+    this.state.file = fd
   }
   
   render(){
@@ -53,6 +65,8 @@ class EditPostForm extends Component {
             value={this.state.content} 
             onChange={this.handleChange} 
             required></textarea>
+          <br/>
+          <input type="file" className="form-control-file" id="exampleFormControlFile1" onChange={(e)=> { this.readFile(e) }} required></input>
           <br/>
           <button className="form-control btn btn-primary">Update Post</button>
         </form> 

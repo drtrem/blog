@@ -28,7 +28,7 @@ export function removePost(id) {
 }
 
 export function editPost(id, name, content, file) { 
-  axios.put( '/api/v1/posts/' + id, { post: {name, content, file} })
+  axios.put( '/api/v1/posts/' + id, file , { headers: {'Content-Type': 'multipart/form-data' }})
   .then((response) => {
     store.dispatch(editPostSuccess(response.data));
     store.dispatch(editingPostSuccess(null));
@@ -61,6 +61,5 @@ export function editingPost(id) {
     if (files.size > 2000000) {
       errors.push("Має бути < 2000 MB");
     }
-    console.log(files.size)
     return errors;
   }
