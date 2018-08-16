@@ -16,12 +16,13 @@ module Api::V1
 
     # POST /posts
     def create
+      puts post_params
       @post = Post.new(post_params)
 
       if @post.save
-        render json: @post, status: :created
+        render json: @post, status: :created, result: true, msg: ' The image is sucessfully uploaded!'
       else
-        render json: @post.errors, status: :unprocessable_entity
+        render json: @post.errors, status: :unprocessable_entity, result: false
       end
     end
 
@@ -47,7 +48,7 @@ module Api::V1
 
       # Only allow a trusted parameter "white list" through.
       def post_params
-        params.require(:post).permit(:category_id, :name, :content, :file)
+        params.permit(:category_id, :name, :content, :file)
       end
   end
 end

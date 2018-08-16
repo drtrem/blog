@@ -23,7 +23,7 @@ class PostList extends Component {
                     <br/>
                     <span>Content: {post.content}</span>
                     <br/>
-                    <span>File: {post.file}</span>
+                    <img src={post.file.standard.url} />
                     <br/>
                     <span className = "float-right">
                       <a onClick={() => postApi.editingPost(post.id)} className="btn btn-primary">Edit</a>
@@ -31,9 +31,6 @@ class PostList extends Component {
                     </span>
                   </li> 
                 </div>
-
-
-
               );
             }
           }

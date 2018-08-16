@@ -7,7 +7,7 @@ class NewPostForm extends Component {
       this.state = {
         name: '',
         content: '',
-        file: '',
+        file: null,
         errors: []
       }
       this.handleChange = this.handleChange.bind(this)
@@ -28,12 +28,19 @@ class NewPostForm extends Component {
     this.props.onNewPost(this.props.categoryId, name, content, file)
     this.state.name = ''
     this.state.content = ''
-    this.state.file = ''
+    this.state.file = null
     this.state.errors = []
   }
   readFile(e){
-    e.preventDefault();
-    this.state.file = e.target.files[0].name;
+    e.preventDefault()
+    let fd = new FormData();
+    fd.append('file', e.target.files[0]);
+    fd.append('name', this.state.name);
+    fd.append('content', this.state.content);
+    fd.append('category_id', this.props.categoryId);
+    console.log(fd)
+    this.state.file = fd
+
   }
   
   render(){

@@ -1,0 +1,817 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'cloudinary-react',
+1 verbose cli   '--save' ]
+2 info using npm@3.10.10
+3 info using node@v6.14.2
+4 verbose config Skipping project config: /home/pribytkovskiy/.npmrc. (matches userconfig)
+5 silly loadCurrentTree Starting
+6 silly install loadCurrentTree
+7 silly install readLocalPackageData
+8 silly fetchPackageMetaData cloudinary-react
+9 silly fetchNamedPackageData cloudinary-react
+10 silly mapToRegistry name cloudinary-react
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry data Result {
+13 silly mapToRegistry   raw: 'cloudinary-react',
+13 silly mapToRegistry   scope: null,
+13 silly mapToRegistry   escapedName: 'cloudinary-react',
+13 silly mapToRegistry   name: 'cloudinary-react',
+13 silly mapToRegistry   rawSpec: '',
+13 silly mapToRegistry   spec: 'latest',
+13 silly mapToRegistry   type: 'tag' }
+14 silly mapToRegistry uri https://registry.npmjs.org/cloudinary-react
+15 verbose request uri https://registry.npmjs.org/cloudinary-react
+16 verbose request no auth needed
+17 info attempt registry request try #1 at 12:53:54
+18 verbose request id 45725e78cfc0bedd
+19 verbose etag W/"bbe6c4c369de27288e71c5ddcc544730"
+20 verbose lastModified Sat, 26 May 2018 20:03:59 GMT
+21 http request GET https://registry.npmjs.org/cloudinary-react
+22 http 304 https://registry.npmjs.org/cloudinary-react
+23 verbose headers { date: 'Thu, 16 Aug 2018 09:53:54 GMT',
+23 verbose headers   connection: 'keep-alive',
+23 verbose headers   'set-cookie': [ '__cfduid=d9bf65f4a2af176ba7d733843aa014d2f1534413234; expires=Fri, 16-Aug-19 09:53:54 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+23 verbose headers   'cache-control': 'max-age=300',
+23 verbose headers   'cf-cache-status': 'HIT',
+23 verbose headers   'cf-ray': '44b3043d4ea1826d-KBP',
+23 verbose headers   etag: '"bbe6c4c369de27288e71c5ddcc544730"',
+23 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+23 verbose headers   'last-modified': 'Sat, 26 May 2018 20:03:59 GMT',
+23 verbose headers   vary: 'accept-encoding, accept',
+23 verbose headers   server: 'cloudflare' }
+24 silly get cb [ 304,
+24 silly get   { date: 'Thu, 16 Aug 2018 09:53:54 GMT',
+24 silly get     connection: 'keep-alive',
+24 silly get     'set-cookie': [ '__cfduid=d9bf65f4a2af176ba7d733843aa014d2f1534413234; expires=Fri, 16-Aug-19 09:53:54 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+24 silly get     'cache-control': 'max-age=300',
+24 silly get     'cf-cache-status': 'HIT',
+24 silly get     'cf-ray': '44b3043d4ea1826d-KBP',
+24 silly get     etag: '"bbe6c4c369de27288e71c5ddcc544730"',
+24 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+24 silly get     'last-modified': 'Sat, 26 May 2018 20:03:59 GMT',
+24 silly get     vary: 'accept-encoding, accept',
+24 silly get     server: 'cloudflare' } ]
+25 verbose etag https://registry.npmjs.org/cloudinary-react from cache
+26 verbose get saving cloudinary-react to /home/pribytkovskiy/.npm/registry.npmjs.org/cloudinary-react/.cache.json
+27 verbose correctMkdir /home/pribytkovskiy/.npm correctMkdir not in flight; initializing
+28 silly install normalizeTree
+29 silly loadCurrentTree Finishing
+30 silly loadIdealTree Starting
+31 silly install loadIdealTree
+32 silly cloneCurrentTree Starting
+33 silly install cloneCurrentTreeToIdealTree
+34 silly cloneCurrentTree Finishing
+35 silly loadShrinkwrap Starting
+36 silly install loadShrinkwrap
+37 silly loadShrinkwrap Finishing
+38 silly loadAllDepsIntoIdealTree Starting
+39 silly install loadAllDepsIntoIdealTree
+40 silly resolveWithNewModule cloudinary-react@1.0.6 checking installable status
+41 silly cache add args [ 'cloudinary-react', null ]
+42 verbose cache add spec cloudinary-react
+43 silly cache add parsed spec Result {
+43 silly cache add   raw: 'cloudinary-react',
+43 silly cache add   scope: null,
+43 silly cache add   escapedName: 'cloudinary-react',
+43 silly cache add   name: 'cloudinary-react',
+43 silly cache add   rawSpec: '',
+43 silly cache add   spec: 'latest',
+43 silly cache add   type: 'tag' }
+44 silly addNamed cloudinary-react@latest
+45 verbose addNamed "latest" is being treated as a dist-tag for cloudinary-react
+46 info addNameTag [ 'cloudinary-react', 'latest' ]
+47 silly mapToRegistry name cloudinary-react
+48 silly mapToRegistry using default registry
+49 silly mapToRegistry registry https://registry.npmjs.org/
+50 silly mapToRegistry data Result {
+50 silly mapToRegistry   raw: 'cloudinary-react',
+50 silly mapToRegistry   scope: null,
+50 silly mapToRegistry   escapedName: 'cloudinary-react',
+50 silly mapToRegistry   name: 'cloudinary-react',
+50 silly mapToRegistry   rawSpec: '',
+50 silly mapToRegistry   spec: 'latest',
+50 silly mapToRegistry   type: 'tag' }
+51 silly mapToRegistry uri https://registry.npmjs.org/cloudinary-react
+52 verbose addNameTag registry:https://registry.npmjs.org/cloudinary-react not in flight; fetching
+53 verbose get https://registry.npmjs.org/cloudinary-react not expired, no request
+54 silly addNameTag next cb for cloudinary-react with tag latest
+55 silly addNamed cloudinary-react@1.0.6
+56 verbose addNamed "1.0.6" is a plain semver version for cloudinary-react
+57 silly cache afterAdd cloudinary-react@1.0.6
+58 verbose afterAdd /home/pribytkovskiy/.npm/cloudinary-react/1.0.6/package/package.json not in flight; writing
+59 verbose correctMkdir /home/pribytkovskiy/.npm correctMkdir not in flight; initializing
+60 verbose afterAdd /home/pribytkovskiy/.npm/cloudinary-react/1.0.6/package/package.json written
+61 silly fetchNamedPackageData cloudinary-core
+62 silly mapToRegistry name cloudinary-core
+63 silly mapToRegistry using default registry
+64 silly mapToRegistry registry https://registry.npmjs.org/
+65 silly mapToRegistry data Result {
+65 silly mapToRegistry   raw: 'cloudinary-core',
+65 silly mapToRegistry   scope: null,
+65 silly mapToRegistry   escapedName: 'cloudinary-core',
+65 silly mapToRegistry   name: 'cloudinary-core',
+65 silly mapToRegistry   rawSpec: '',
+65 silly mapToRegistry   spec: 'latest',
+65 silly mapToRegistry   type: 'tag' }
+66 silly mapToRegistry uri https://registry.npmjs.org/cloudinary-core
+67 silly fetchNamedPackageData prop-types
+68 silly mapToRegistry name prop-types
+69 silly mapToRegistry using default registry
+70 silly mapToRegistry registry https://registry.npmjs.org/
+71 silly mapToRegistry data Result {
+71 silly mapToRegistry   raw: 'prop-types',
+71 silly mapToRegistry   scope: null,
+71 silly mapToRegistry   escapedName: 'prop-types',
+71 silly mapToRegistry   name: 'prop-types',
+71 silly mapToRegistry   rawSpec: '',
+71 silly mapToRegistry   spec: 'latest',
+71 silly mapToRegistry   type: 'tag' }
+72 silly mapToRegistry uri https://registry.npmjs.org/prop-types
+73 verbose request uri https://registry.npmjs.org/cloudinary-core
+74 verbose request no auth needed
+75 info attempt registry request try #1 at 12:53:54
+76 verbose etag W/"744ff74633a073ef90880565bbe64ea9"
+77 verbose lastModified Sat, 26 May 2018 20:03:57 GMT
+78 http request GET https://registry.npmjs.org/cloudinary-core
+79 verbose request uri https://registry.npmjs.org/prop-types
+80 verbose request no auth needed
+81 info attempt registry request try #1 at 12:53:54
+82 verbose etag W/"865711978b2e51602286895f2cec0472"
+83 verbose lastModified Thu, 26 Jul 2018 21:46:51 GMT
+84 http request GET https://registry.npmjs.org/prop-types
+85 http 304 https://registry.npmjs.org/cloudinary-core
+86 verbose headers { date: 'Thu, 16 Aug 2018 09:53:54 GMT',
+86 verbose headers   connection: 'keep-alive',
+86 verbose headers   'set-cookie': [ '__cfduid=d9bf65f4a2af176ba7d733843aa014d2f1534413234; expires=Fri, 16-Aug-19 09:53:54 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+86 verbose headers   'cache-control': 'max-age=300',
+86 verbose headers   'cf-cache-status': 'HIT',
+86 verbose headers   'cf-ray': '44b3043e2ef3826d-KBP',
+86 verbose headers   etag: '"744ff74633a073ef90880565bbe64ea9"',
+86 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+86 verbose headers   'last-modified': 'Sat, 26 May 2018 20:03:57 GMT',
+86 verbose headers   vary: 'accept-encoding, accept',
+86 verbose headers   server: 'cloudflare' }
+87 silly get cb [ 304,
+87 silly get   { date: 'Thu, 16 Aug 2018 09:53:54 GMT',
+87 silly get     connection: 'keep-alive',
+87 silly get     'set-cookie': [ '__cfduid=d9bf65f4a2af176ba7d733843aa014d2f1534413234; expires=Fri, 16-Aug-19 09:53:54 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+87 silly get     'cache-control': 'max-age=300',
+87 silly get     'cf-cache-status': 'HIT',
+87 silly get     'cf-ray': '44b3043e2ef3826d-KBP',
+87 silly get     etag: '"744ff74633a073ef90880565bbe64ea9"',
+87 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+87 silly get     'last-modified': 'Sat, 26 May 2018 20:03:57 GMT',
+87 silly get     vary: 'accept-encoding, accept',
+87 silly get     server: 'cloudflare' } ]
+88 verbose etag https://registry.npmjs.org/cloudinary-core from cache
+89 verbose get saving cloudinary-core to /home/pribytkovskiy/.npm/registry.npmjs.org/cloudinary-core/.cache.json
+90 verbose correctMkdir /home/pribytkovskiy/.npm correctMkdir not in flight; initializing
+91 silly resolveWithNewModule cloudinary-core@2.5.0 checking installable status
+92 silly cache add args [ 'cloudinary-core@^2.3.0', null ]
+93 verbose cache add spec cloudinary-core@^2.3.0
+94 silly cache add parsed spec Result {
+94 silly cache add   raw: 'cloudinary-core@^2.3.0',
+94 silly cache add   scope: null,
+94 silly cache add   escapedName: 'cloudinary-core',
+94 silly cache add   name: 'cloudinary-core',
+94 silly cache add   rawSpec: '^2.3.0',
+94 silly cache add   spec: '>=2.3.0 <3.0.0',
+94 silly cache add   type: 'range' }
+95 silly addNamed cloudinary-core@>=2.3.0 <3.0.0
+96 verbose addNamed ">=2.3.0 <3.0.0" is a valid semver range for cloudinary-core
+97 silly addNameRange { name: 'cloudinary-core',
+97 silly addNameRange   range: '>=2.3.0 <3.0.0',
+97 silly addNameRange   hasData: false }
+98 silly mapToRegistry name cloudinary-core
+99 silly mapToRegistry using default registry
+100 silly mapToRegistry registry https://registry.npmjs.org/
+101 silly mapToRegistry data Result {
+101 silly mapToRegistry   raw: 'cloudinary-core',
+101 silly mapToRegistry   scope: null,
+101 silly mapToRegistry   escapedName: 'cloudinary-core',
+101 silly mapToRegistry   name: 'cloudinary-core',
+101 silly mapToRegistry   rawSpec: '',
+101 silly mapToRegistry   spec: 'latest',
+101 silly mapToRegistry   type: 'tag' }
+102 silly mapToRegistry uri https://registry.npmjs.org/cloudinary-core
+103 verbose addNameRange registry:https://registry.npmjs.org/cloudinary-core not in flight; fetching
+104 verbose get https://registry.npmjs.org/cloudinary-core not expired, no request
+105 silly addNameRange number 2 { name: 'cloudinary-core',
+105 silly addNameRange   range: '>=2.3.0 <3.0.0',
+105 silly addNameRange   hasData: true }
+106 silly addNameRange versions [ 'cloudinary-core',
+106 silly addNameRange   [ '2.0.0',
+106 silly addNameRange     '2.0.1',
+106 silly addNameRange     '2.0.2',
+106 silly addNameRange     '2.0.3',
+106 silly addNameRange     '2.0.5',
+106 silly addNameRange     '2.0.6',
+106 silly addNameRange     '2.0.8',
+106 silly addNameRange     '2.0.9',
+106 silly addNameRange     '2.1.0',
+106 silly addNameRange     '2.1.1',
+106 silly addNameRange     '2.1.2',
+106 silly addNameRange     '2.1.5',
+106 silly addNameRange     '2.1.6',
+106 silly addNameRange     '2.1.7',
+106 silly addNameRange     '2.1.8',
+106 silly addNameRange     '2.1.9',
+106 silly addNameRange     '2.2.0',
+106 silly addNameRange     '2.2.1',
+106 silly addNameRange     '2.3.0',
+106 silly addNameRange     '2.4.0',
+106 silly addNameRange     '2.5.0' ] ]
+107 silly addNamed cloudinary-core@2.5.0
+108 verbose addNamed "2.5.0" is a plain semver version for cloudinary-core
+109 silly cache afterAdd cloudinary-core@2.5.0
+110 verbose afterAdd /home/pribytkovskiy/.npm/cloudinary-core/2.5.0/package/package.json not in flight; writing
+111 verbose correctMkdir /home/pribytkovskiy/.npm correctMkdir not in flight; initializing
+112 verbose afterAdd /home/pribytkovskiy/.npm/cloudinary-core/2.5.0/package/package.json written
+113 http 304 https://registry.npmjs.org/prop-types
+114 verbose headers { date: 'Thu, 16 Aug 2018 09:53:54 GMT',
+114 verbose headers   connection: 'keep-alive',
+114 verbose headers   'set-cookie': [ '__cfduid=d17bd47e0c965fc0679e69a3669c809581534413234; expires=Fri, 16-Aug-19 09:53:54 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+114 verbose headers   'cache-control': 'max-age=300',
+114 verbose headers   'cf-cache-status': 'HIT',
+114 verbose headers   'cf-ray': '44b3043e88c88ad4-KBP',
+114 verbose headers   etag: '"865711978b2e51602286895f2cec0472"',
+114 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+114 verbose headers   'last-modified': 'Thu, 26 Jul 2018 21:46:51 GMT',
+114 verbose headers   vary: 'accept-encoding, accept',
+114 verbose headers   server: 'cloudflare' }
+115 silly get cb [ 304,
+115 silly get   { date: 'Thu, 16 Aug 2018 09:53:54 GMT',
+115 silly get     connection: 'keep-alive',
+115 silly get     'set-cookie': [ '__cfduid=d17bd47e0c965fc0679e69a3669c809581534413234; expires=Fri, 16-Aug-19 09:53:54 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+115 silly get     'cache-control': 'max-age=300',
+115 silly get     'cf-cache-status': 'HIT',
+115 silly get     'cf-ray': '44b3043e88c88ad4-KBP',
+115 silly get     etag: '"865711978b2e51602286895f2cec0472"',
+115 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+115 silly get     'last-modified': 'Thu, 26 Jul 2018 21:46:51 GMT',
+115 silly get     vary: 'accept-encoding, accept',
+115 silly get     server: 'cloudflare' } ]
+116 verbose etag https://registry.npmjs.org/prop-types from cache
+117 verbose get saving prop-types to /home/pribytkovskiy/.npm/registry.npmjs.org/prop-types/.cache.json
+118 verbose correctMkdir /home/pribytkovskiy/.npm correctMkdir not in flight; initializing
+119 silly resolveWithNewModule prop-types@15.6.2 checking installable status
+120 silly cache add args [ 'prop-types@^15.6.0', null ]
+121 verbose cache add spec prop-types@^15.6.0
+122 silly cache add parsed spec Result {
+122 silly cache add   raw: 'prop-types@^15.6.0',
+122 silly cache add   scope: null,
+122 silly cache add   escapedName: 'prop-types',
+122 silly cache add   name: 'prop-types',
+122 silly cache add   rawSpec: '^15.6.0',
+122 silly cache add   spec: '>=15.6.0 <16.0.0',
+122 silly cache add   type: 'range' }
+123 silly addNamed prop-types@>=15.6.0 <16.0.0
+124 verbose addNamed ">=15.6.0 <16.0.0" is a valid semver range for prop-types
+125 silly addNameRange { name: 'prop-types', range: '>=15.6.0 <16.0.0', hasData: false }
+126 silly mapToRegistry name prop-types
+127 silly mapToRegistry using default registry
+128 silly mapToRegistry registry https://registry.npmjs.org/
+129 silly mapToRegistry data Result {
+129 silly mapToRegistry   raw: 'prop-types',
+129 silly mapToRegistry   scope: null,
+129 silly mapToRegistry   escapedName: 'prop-types',
+129 silly mapToRegistry   name: 'prop-types',
+129 silly mapToRegistry   rawSpec: '',
+129 silly mapToRegistry   spec: 'latest',
+129 silly mapToRegistry   type: 'tag' }
+130 silly mapToRegistry uri https://registry.npmjs.org/prop-types
+131 verbose addNameRange registry:https://registry.npmjs.org/prop-types not in flight; fetching
+132 verbose get https://registry.npmjs.org/prop-types not expired, no request
+133 silly addNameRange number 2 { name: 'prop-types', range: '>=15.6.0 <16.0.0', hasData: true }
+134 silly addNameRange versions [ 'prop-types',
+134 silly addNameRange   [ '0.1.0',
+134 silly addNameRange     '0.2.0',
+134 silly addNameRange     '15.5.0-alpha.0',
+134 silly addNameRange     '15.5.0',
+134 silly addNameRange     '15.5.1',
+134 silly addNameRange     '15.5.2',
+134 silly addNameRange     '15.5.3',
+134 silly addNameRange     '15.5.4',
+134 silly addNameRange     '15.5.5',
+134 silly addNameRange     '15.5.6',
+134 silly addNameRange     '15.5.7-alpha',
+134 silly addNameRange     '15.5.7-alpha.1',
+134 silly addNameRange     '15.5.7',
+134 silly addNameRange     '15.5.8',
+134 silly addNameRange     '15.5.9',
+134 silly addNameRange     '15.5.10',
+134 silly addNameRange     '15.6.0',
+134 silly addNameRange     '15.6.1',
+134 silly addNameRange     '15.6.2' ] ]
+135 silly addNamed prop-types@15.6.2
+136 verbose addNamed "15.6.2" is a plain semver version for prop-types
+137 silly cache afterAdd prop-types@15.6.2
+138 verbose afterAdd /home/pribytkovskiy/.npm/prop-types/15.6.2/package/package.json not in flight; writing
+139 verbose correctMkdir /home/pribytkovskiy/.npm correctMkdir not in flight; initializing
+140 verbose afterAdd /home/pribytkovskiy/.npm/prop-types/15.6.2/package/package.json written
+141 silly fetchNamedPackageData lodash
+142 silly mapToRegistry name lodash
+143 silly mapToRegistry using default registry
+144 silly mapToRegistry registry https://registry.npmjs.org/
+145 silly mapToRegistry data Result {
+145 silly mapToRegistry   raw: 'lodash',
+145 silly mapToRegistry   scope: null,
+145 silly mapToRegistry   escapedName: 'lodash',
+145 silly mapToRegistry   name: 'lodash',
+145 silly mapToRegistry   rawSpec: '',
+145 silly mapToRegistry   spec: 'latest',
+145 silly mapToRegistry   type: 'tag' }
+146 silly mapToRegistry uri https://registry.npmjs.org/lodash
+147 verbose request uri https://registry.npmjs.org/lodash
+148 verbose request no auth needed
+149 info attempt registry request try #1 at 12:53:55
+150 verbose etag W/"3d0e09b0702b0c1fd67e04ec93e77142"
+151 verbose lastModified Wed, 15 Aug 2018 21:27:33 GMT
+152 http request GET https://registry.npmjs.org/lodash
+153 http 304 https://registry.npmjs.org/lodash
+154 verbose headers { date: 'Thu, 16 Aug 2018 09:53:55 GMT',
+154 verbose headers   connection: 'keep-alive',
+154 verbose headers   'set-cookie': [ '__cfduid=daf20686967f075dcebf03e1466713c261534413235; expires=Fri, 16-Aug-19 09:53:55 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+154 verbose headers   'cache-control': 'max-age=300',
+154 verbose headers   'cf-cache-status': 'HIT',
+154 verbose headers   'cf-ray': '44b3043eef6a826d-KBP',
+154 verbose headers   etag: '"3d0e09b0702b0c1fd67e04ec93e77142"',
+154 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+154 verbose headers   'last-modified': 'Wed, 15 Aug 2018 21:27:33 GMT',
+154 verbose headers   vary: 'accept-encoding, accept',
+154 verbose headers   server: 'cloudflare' }
+155 silly get cb [ 304,
+155 silly get   { date: 'Thu, 16 Aug 2018 09:53:55 GMT',
+155 silly get     connection: 'keep-alive',
+155 silly get     'set-cookie': [ '__cfduid=daf20686967f075dcebf03e1466713c261534413235; expires=Fri, 16-Aug-19 09:53:55 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+155 silly get     'cache-control': 'max-age=300',
+155 silly get     'cf-cache-status': 'HIT',
+155 silly get     'cf-ray': '44b3043eef6a826d-KBP',
+155 silly get     etag: '"3d0e09b0702b0c1fd67e04ec93e77142"',
+155 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+155 silly get     'last-modified': 'Wed, 15 Aug 2018 21:27:33 GMT',
+155 silly get     vary: 'accept-encoding, accept',
+155 silly get     server: 'cloudflare' } ]
+156 verbose etag https://registry.npmjs.org/lodash from cache
+157 verbose get saving lodash to /home/pribytkovskiy/.npm/registry.npmjs.org/lodash/.cache.json
+158 verbose correctMkdir /home/pribytkovskiy/.npm correctMkdir not in flight; initializing
+159 silly resolveWithNewModule lodash@4.17.10 checking installable status
+160 silly cache add args [ 'lodash@>=3.0', null ]
+161 verbose cache add spec lodash@>=3.0
+162 silly cache add parsed spec Result {
+162 silly cache add   raw: 'lodash@>=3.0',
+162 silly cache add   scope: null,
+162 silly cache add   escapedName: 'lodash',
+162 silly cache add   name: 'lodash',
+162 silly cache add   rawSpec: '>=3.0',
+162 silly cache add   spec: '>=3.0.0',
+162 silly cache add   type: 'range' }
+163 silly addNamed lodash@>=3.0.0
+164 verbose addNamed ">=3.0.0" is a valid semver range for lodash
+165 silly addNameRange { name: 'lodash', range: '>=3.0.0', hasData: false }
+166 silly mapToRegistry name lodash
+167 silly mapToRegistry using default registry
+168 silly mapToRegistry registry https://registry.npmjs.org/
+169 silly mapToRegistry data Result {
+169 silly mapToRegistry   raw: 'lodash',
+169 silly mapToRegistry   scope: null,
+169 silly mapToRegistry   escapedName: 'lodash',
+169 silly mapToRegistry   name: 'lodash',
+169 silly mapToRegistry   rawSpec: '',
+169 silly mapToRegistry   spec: 'latest',
+169 silly mapToRegistry   type: 'tag' }
+170 silly mapToRegistry uri https://registry.npmjs.org/lodash
+171 verbose addNameRange registry:https://registry.npmjs.org/lodash not in flight; fetching
+172 verbose get https://registry.npmjs.org/lodash not expired, no request
+173 silly addNameRange number 2 { name: 'lodash', range: '>=3.0.0', hasData: true }
+174 silly addNameRange versions [ 'lodash',
+174 silly addNameRange   [ '0.1.0',
+174 silly addNameRange     '0.2.0',
+174 silly addNameRange     '0.2.1',
+174 silly addNameRange     '0.2.2',
+174 silly addNameRange     '0.3.0',
+174 silly addNameRange     '0.3.1',
+174 silly addNameRange     '0.3.2',
+174 silly addNameRange     '0.4.0',
+174 silly addNameRange     '0.4.1',
+174 silly addNameRange     '0.4.2',
+174 silly addNameRange     '0.5.0-rc.1',
+174 silly addNameRange     '0.5.0',
+174 silly addNameRange     '0.5.1',
+174 silly addNameRange     '0.5.2',
+174 silly addNameRange     '0.6.0',
+174 silly addNameRange     '0.6.1',
+174 silly addNameRange     '0.7.0',
+174 silly addNameRange     '0.8.0',
+174 silly addNameRange     '0.8.1',
+174 silly addNameRange     '0.8.2',
+174 silly addNameRange     '0.9.0',
+174 silly addNameRange     '0.9.1',
+174 silly addNameRange     '0.9.2',
+174 silly addNameRange     '0.10.0',
+174 silly addNameRange     '1.0.0-rc.1',
+174 silly addNameRange     '1.0.0-rc.2',
+174 silly addNameRange     '1.0.0-rc.3',
+174 silly addNameRange     '1.0.0',
+174 silly addNameRange     '1.0.1',
+174 silly addNameRange     '1.1.0',
+174 silly addNameRange     '1.1.1',
+174 silly addNameRange     '1.2.0',
+174 silly addNameRange     '1.2.1',
+174 silly addNameRange     '1.3.0',
+174 silly addNameRange     '1.3.1',
+174 silly addNameRange     '2.0.0',
+174 silly addNameRange     '2.1.0',
+174 silly addNameRange     '2.2.0',
+174 silly addNameRange     '2.2.1',
+174 silly addNameRange     '2.3.0',
+174 silly addNameRange     '2.4.0',
+174 silly addNameRange     '2.4.1',
+174 silly addNameRange     '3.0.0',
+174 silly addNameRange     '3.0.1',
+174 silly addNameRange     '3.1.0',
+174 silly addNameRange     '3.2.0',
+174 silly addNameRange     '3.3.0',
+174 silly addNameRange     '3.3.1',
+174 silly addNameRange     '3.4.0',
+174 silly addNameRange     '3.5.0',
+174 silly addNameRange     '3.6.0',
+174 silly addNameRange     '1.0.2',
+174 silly addNameRange     '3.7.0',
+174 silly addNameRange     '2.4.2',
+174 silly addNameRange     '3.8.0',
+174 silly addNameRange     '3.9.0',
+174 silly addNameRange     '3.9.1',
+174 silly addNameRange     '3.9.2',
+174 silly addNameRange     '3.9.3',
+174 silly addNameRange     '3.10.0',
+174 silly addNameRange     '3.10.1',
+174 silly addNameRange     '4.0.0',
+174 silly addNameRange     '4.0.1',
+174 silly addNameRange     '4.1.0',
+174 silly addNameRange     '4.2.0',
+174 silly addNameRange     '4.2.1',
+174 silly addNameRange     '4.3.0',
+174 silly addNameRange     '4.4.0',
+174 silly addNameRange     '4.5.0',
+174 silly addNameRange     '4.5.1',
+174 silly addNameRange     '4.6.0',
+174 silly addNameRange     '4.6.1',
+174 silly addNameRange     '4.7.0',
+174 silly addNameRange     '4.8.0',
+174 silly addNameRange     '4.8.1',
+174 silly addNameRange     '4.8.2',
+174 silly addNameRange     '4.9.0',
+174 silly addNameRange     '4.10.0',
+174 silly addNameRange     '4.11.0',
+174 silly addNameRange     '4.11.1',
+174 silly addNameRange     '4.11.2',
+174 silly addNameRange     '4.12.0',
+174 silly addNameRange     '4.13.0',
+174 silly addNameRange     '4.13.1',
+174 silly addNameRange     '4.14.0',
+174 silly addNameRange     '4.14.1',
+174 silly addNameRange     '4.14.2',
+174 silly addNameRange     '4.15.0',
+174 silly addNameRange     '4.16.0',
+174 silly addNameRange     '4.16.1',
+174 silly addNameRange     '4.16.2',
+174 silly addNameRange     '4.16.3',
+174 silly addNameRange     '4.16.4',
+174 silly addNameRange     '4.16.5',
+174 silly addNameRange     '4.16.6',
+174 silly addNameRange     '4.17.0',
+174 silly addNameRange     '4.17.1',
+174 silly addNameRange     '4.17.2',
+174 silly addNameRange     '4.17.3',
+174 silly addNameRange     '4.17.4',
+174 silly addNameRange     ... 3 more items ] ]
+175 silly addNamed lodash@4.17.10
+176 verbose addNamed "4.17.10" is a plain semver version for lodash
+177 silly cache afterAdd lodash@4.17.10
+178 verbose afterAdd /home/pribytkovskiy/.npm/lodash/4.17.10/package/package.json not in flight; writing
+179 verbose correctMkdir /home/pribytkovskiy/.npm correctMkdir not in flight; initializing
+180 verbose afterAdd /home/pribytkovskiy/.npm/lodash/4.17.10/package/package.json written
+181 silly fetchNamedPackageData loose-envify
+182 silly mapToRegistry name loose-envify
+183 silly mapToRegistry using default registry
+184 silly mapToRegistry registry https://registry.npmjs.org/
+185 silly mapToRegistry data Result {
+185 silly mapToRegistry   raw: 'loose-envify',
+185 silly mapToRegistry   scope: null,
+185 silly mapToRegistry   escapedName: 'loose-envify',
+185 silly mapToRegistry   name: 'loose-envify',
+185 silly mapToRegistry   rawSpec: '',
+185 silly mapToRegistry   spec: 'latest',
+185 silly mapToRegistry   type: 'tag' }
+186 silly mapToRegistry uri https://registry.npmjs.org/loose-envify
+187 verbose request uri https://registry.npmjs.org/loose-envify
+188 verbose request no auth needed
+189 info attempt registry request try #1 at 12:53:55
+190 verbose etag W/"ff7dfaf14204cb0931ee4ffe2c39c3ce"
+191 verbose lastModified Tue, 10 Jul 2018 11:09:50 GMT
+192 http request GET https://registry.npmjs.org/loose-envify
+193 http 304 https://registry.npmjs.org/loose-envify
+194 verbose headers { date: 'Thu, 16 Aug 2018 09:53:55 GMT',
+194 verbose headers   connection: 'keep-alive',
+194 verbose headers   'set-cookie': [ '__cfduid=dac31139abc99f7883a182e638bd73fdf1534413235; expires=Fri, 16-Aug-19 09:53:55 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+194 verbose headers   'cache-control': 'max-age=300',
+194 verbose headers   'cf-cache-status': 'HIT',
+194 verbose headers   'cf-ray': '44b3043fe9668ad4-KBP',
+194 verbose headers   etag: '"ff7dfaf14204cb0931ee4ffe2c39c3ce"',
+194 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+194 verbose headers   'last-modified': 'Tue, 10 Jul 2018 11:09:50 GMT',
+194 verbose headers   vary: 'accept-encoding, accept',
+194 verbose headers   server: 'cloudflare' }
+195 silly get cb [ 304,
+195 silly get   { date: 'Thu, 16 Aug 2018 09:53:55 GMT',
+195 silly get     connection: 'keep-alive',
+195 silly get     'set-cookie': [ '__cfduid=dac31139abc99f7883a182e638bd73fdf1534413235; expires=Fri, 16-Aug-19 09:53:55 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+195 silly get     'cache-control': 'max-age=300',
+195 silly get     'cf-cache-status': 'HIT',
+195 silly get     'cf-ray': '44b3043fe9668ad4-KBP',
+195 silly get     etag: '"ff7dfaf14204cb0931ee4ffe2c39c3ce"',
+195 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+195 silly get     'last-modified': 'Tue, 10 Jul 2018 11:09:50 GMT',
+195 silly get     vary: 'accept-encoding, accept',
+195 silly get     server: 'cloudflare' } ]
+196 verbose etag https://registry.npmjs.org/loose-envify from cache
+197 verbose get saving loose-envify to /home/pribytkovskiy/.npm/registry.npmjs.org/loose-envify/.cache.json
+198 verbose correctMkdir /home/pribytkovskiy/.npm correctMkdir not in flight; initializing
+199 silly resolveWithNewModule loose-envify@1.4.0 checking installable status
+200 silly cache add args [ 'loose-envify@^1.3.1', null ]
+201 verbose cache add spec loose-envify@^1.3.1
+202 silly cache add parsed spec Result {
+202 silly cache add   raw: 'loose-envify@^1.3.1',
+202 silly cache add   scope: null,
+202 silly cache add   escapedName: 'loose-envify',
+202 silly cache add   name: 'loose-envify',
+202 silly cache add   rawSpec: '^1.3.1',
+202 silly cache add   spec: '>=1.3.1 <2.0.0',
+202 silly cache add   type: 'range' }
+203 silly addNamed loose-envify@>=1.3.1 <2.0.0
+204 verbose addNamed ">=1.3.1 <2.0.0" is a valid semver range for loose-envify
+205 silly addNameRange { name: 'loose-envify', range: '>=1.3.1 <2.0.0', hasData: false }
+206 silly mapToRegistry name loose-envify
+207 silly mapToRegistry using default registry
+208 silly mapToRegistry registry https://registry.npmjs.org/
+209 silly mapToRegistry data Result {
+209 silly mapToRegistry   raw: 'loose-envify',
+209 silly mapToRegistry   scope: null,
+209 silly mapToRegistry   escapedName: 'loose-envify',
+209 silly mapToRegistry   name: 'loose-envify',
+209 silly mapToRegistry   rawSpec: '',
+209 silly mapToRegistry   spec: 'latest',
+209 silly mapToRegistry   type: 'tag' }
+210 silly mapToRegistry uri https://registry.npmjs.org/loose-envify
+211 verbose addNameRange registry:https://registry.npmjs.org/loose-envify not in flight; fetching
+212 verbose get https://registry.npmjs.org/loose-envify not expired, no request
+213 silly addNameRange number 2 { name: 'loose-envify', range: '>=1.3.1 <2.0.0', hasData: true }
+214 silly addNameRange versions [ 'loose-envify',
+214 silly addNameRange   [ '1.0.0', '1.1.0', '1.2.0', '1.3.0', '1.3.1', '1.4.0' ] ]
+215 silly addNamed loose-envify@1.4.0
+216 verbose addNamed "1.4.0" is a plain semver version for loose-envify
+217 silly cache afterAdd loose-envify@1.4.0
+218 verbose afterAdd /home/pribytkovskiy/.npm/loose-envify/1.4.0/package/package.json not in flight; writing
+219 verbose correctMkdir /home/pribytkovskiy/.npm correctMkdir not in flight; initializing
+220 verbose afterAdd /home/pribytkovskiy/.npm/loose-envify/1.4.0/package/package.json written
+221 silly fetchNamedPackageData js-tokens
+222 silly mapToRegistry name js-tokens
+223 silly mapToRegistry using default registry
+224 silly mapToRegistry registry https://registry.npmjs.org/
+225 silly mapToRegistry data Result {
+225 silly mapToRegistry   raw: 'js-tokens',
+225 silly mapToRegistry   scope: null,
+225 silly mapToRegistry   escapedName: 'js-tokens',
+225 silly mapToRegistry   name: 'js-tokens',
+225 silly mapToRegistry   rawSpec: '',
+225 silly mapToRegistry   spec: 'latest',
+225 silly mapToRegistry   type: 'tag' }
+226 silly mapToRegistry uri https://registry.npmjs.org/js-tokens
+227 verbose request uri https://registry.npmjs.org/js-tokens
+228 verbose request no auth needed
+229 info attempt registry request try #1 at 12:53:55
+230 verbose etag W/"18dc5eb8de2458b03381bd50474e6122"
+231 verbose lastModified Sun, 27 May 2018 05:33:50 GMT
+232 http request GET https://registry.npmjs.org/js-tokens
+233 http 304 https://registry.npmjs.org/js-tokens
+234 verbose headers { date: 'Thu, 16 Aug 2018 09:53:55 GMT',
+234 verbose headers   connection: 'keep-alive',
+234 verbose headers   'set-cookie': [ '__cfduid=daf20686967f075dcebf03e1466713c261534413235; expires=Fri, 16-Aug-19 09:53:55 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+234 verbose headers   'cache-control': 'max-age=300',
+234 verbose headers   'cf-cache-status': 'HIT',
+234 verbose headers   'cf-ray': '44b304401fef826d-KBP',
+234 verbose headers   etag: '"18dc5eb8de2458b03381bd50474e6122"',
+234 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+234 verbose headers   'last-modified': 'Sun, 27 May 2018 05:33:50 GMT',
+234 verbose headers   vary: 'accept-encoding, accept',
+234 verbose headers   server: 'cloudflare' }
+235 silly get cb [ 304,
+235 silly get   { date: 'Thu, 16 Aug 2018 09:53:55 GMT',
+235 silly get     connection: 'keep-alive',
+235 silly get     'set-cookie': [ '__cfduid=daf20686967f075dcebf03e1466713c261534413235; expires=Fri, 16-Aug-19 09:53:55 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+235 silly get     'cache-control': 'max-age=300',
+235 silly get     'cf-cache-status': 'HIT',
+235 silly get     'cf-ray': '44b304401fef826d-KBP',
+235 silly get     etag: '"18dc5eb8de2458b03381bd50474e6122"',
+235 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+235 silly get     'last-modified': 'Sun, 27 May 2018 05:33:50 GMT',
+235 silly get     vary: 'accept-encoding, accept',
+235 silly get     server: 'cloudflare' } ]
+236 verbose etag https://registry.npmjs.org/js-tokens from cache
+237 verbose get saving js-tokens to /home/pribytkovskiy/.npm/registry.npmjs.org/js-tokens/.cache.json
+238 verbose correctMkdir /home/pribytkovskiy/.npm correctMkdir not in flight; initializing
+239 silly resolveWithNewModule js-tokens@4.0.0 checking installable status
+240 silly cache add args [ 'js-tokens@^3.0.0 || ^4.0.0', null ]
+241 verbose cache add spec js-tokens@^3.0.0 || ^4.0.0
+242 silly cache add parsed spec Result {
+242 silly cache add   raw: 'js-tokens@^3.0.0 || ^4.0.0',
+242 silly cache add   scope: null,
+242 silly cache add   escapedName: 'js-tokens',
+242 silly cache add   name: 'js-tokens',
+242 silly cache add   rawSpec: '^3.0.0 || ^4.0.0',
+242 silly cache add   spec: '>=3.0.0 <4.0.0||>=4.0.0 <5.0.0',
+242 silly cache add   type: 'range' }
+243 silly addNamed js-tokens@>=3.0.0 <4.0.0||>=4.0.0 <5.0.0
+244 verbose addNamed ">=3.0.0 <4.0.0||>=4.0.0 <5.0.0" is a valid semver range for js-tokens
+245 silly addNameRange { name: 'js-tokens',
+245 silly addNameRange   range: '>=3.0.0 <4.0.0||>=4.0.0 <5.0.0',
+245 silly addNameRange   hasData: false }
+246 silly mapToRegistry name js-tokens
+247 silly mapToRegistry using default registry
+248 silly mapToRegistry registry https://registry.npmjs.org/
+249 silly mapToRegistry data Result {
+249 silly mapToRegistry   raw: 'js-tokens',
+249 silly mapToRegistry   scope: null,
+249 silly mapToRegistry   escapedName: 'js-tokens',
+249 silly mapToRegistry   name: 'js-tokens',
+249 silly mapToRegistry   rawSpec: '',
+249 silly mapToRegistry   spec: 'latest',
+249 silly mapToRegistry   type: 'tag' }
+250 silly mapToRegistry uri https://registry.npmjs.org/js-tokens
+251 verbose addNameRange registry:https://registry.npmjs.org/js-tokens not in flight; fetching
+252 verbose get https://registry.npmjs.org/js-tokens not expired, no request
+253 silly addNameRange number 2 { name: 'js-tokens',
+253 silly addNameRange   range: '>=3.0.0 <4.0.0||>=4.0.0 <5.0.0',
+253 silly addNameRange   hasData: true }
+254 silly addNameRange versions [ 'js-tokens',
+254 silly addNameRange   [ '0.1.0',
+254 silly addNameRange     '0.2.0',
+254 silly addNameRange     '0.3.0',
+254 silly addNameRange     '0.3.1',
+254 silly addNameRange     '0.4.0',
+254 silly addNameRange     '0.4.1',
+254 silly addNameRange     '1.0.0',
+254 silly addNameRange     '1.0.1',
+254 silly addNameRange     '1.0.2',
+254 silly addNameRange     '1.0.3',
+254 silly addNameRange     '2.0.0',
+254 silly addNameRange     '3.0.0',
+254 silly addNameRange     '3.0.1',
+254 silly addNameRange     '3.0.2',
+254 silly addNameRange     '4.0.0' ] ]
+255 silly addNamed js-tokens@4.0.0
+256 verbose addNamed "4.0.0" is a plain semver version for js-tokens
+257 silly cache afterAdd js-tokens@4.0.0
+258 verbose afterAdd /home/pribytkovskiy/.npm/js-tokens/4.0.0/package/package.json not in flight; writing
+259 verbose correctMkdir /home/pribytkovskiy/.npm correctMkdir not in flight; initializing
+260 verbose afterAdd /home/pribytkovskiy/.npm/js-tokens/4.0.0/package/package.json written
+261 silly loadAllDepsIntoIdealTree Finishing
+262 silly loadIdealTree Finishing
+263 silly currentTree pribytkovskiy
+263 silly currentTree ├── adm-zip@0.4.7
+263 silly currentTree ├── bluebird@3.4.6
+263 silly currentTree ├── capture-stack-trace@1.0.0
+263 silly currentTree ├── chownr@1.0.1
+263 silly currentTree ├── core-util-is@1.0.2
+263 silly currentTree ├── create-error-class@3.0.2
+263 silly currentTree ├── duplexer2@0.1.4
+263 silly currentTree ├── error-ex@1.3.2
+263 silly currentTree ├── geckodriver@1.11.0
+263 silly currentTree ├── got@5.6.0
+263 silly currentTree ├── inherits@2.0.3
+263 silly currentTree ├── is-arrayish@0.2.1
+263 silly currentTree ├── is-plain-obj@1.1.0
+263 silly currentTree ├── is-redirect@1.0.0
+263 silly currentTree ├── is-retry-allowed@1.1.0
+263 silly currentTree ├── is-stream@1.1.0
+263 silly currentTree ├── isarray@1.0.0
+263 silly currentTree ├── lowercase-keys@1.0.1
+263 silly currentTree ├── minimist@0.0.8
+263 silly currentTree ├── minipass@2.3.3
+263 silly currentTree ├── minizlib@1.1.0
+263 silly currentTree ├── mkdirp@0.5.1
+263 silly currentTree ├── node-status-codes@1.0.0
+263 silly currentTree ├── object-assign@4.1.1
+263 silly currentTree ├── parse-json@2.2.0
+263 silly currentTree ├── pinkie-promise@2.0.1
+263 silly currentTree ├── pinkie@2.0.4
+263 silly currentTree ├── prepend-http@1.0.4
+263 silly currentTree ├── process-nextick-args@2.0.0
+263 silly currentTree ├── read-all-stream@3.1.0
+263 silly currentTree ├── readable-stream@2.3.6
+263 silly currentTree ├── safe-buffer@5.1.2
+263 silly currentTree ├── string_decoder@1.1.1
+263 silly currentTree ├── tar@4.0.2
+263 silly currentTree ├── timed-out@2.0.0
+263 silly currentTree ├── unzip-response@1.0.2
+263 silly currentTree ├── url-parse-lax@1.0.0
+263 silly currentTree ├── util-deprecate@1.0.2
+263 silly currentTree └── yallist@3.0.2
+264 silly idealTree pribytkovskiy
+264 silly idealTree ├── adm-zip@0.4.7
+264 silly idealTree ├── bluebird@3.4.6
+264 silly idealTree ├── capture-stack-trace@1.0.0
+264 silly idealTree ├── chownr@1.0.1
+264 silly idealTree ├── cloudinary-core@2.5.0
+264 silly idealTree ├── cloudinary-react@1.0.6
+264 silly idealTree ├── core-util-is@1.0.2
+264 silly idealTree ├── create-error-class@3.0.2
+264 silly idealTree ├── duplexer2@0.1.4
+264 silly idealTree ├── error-ex@1.3.2
+264 silly idealTree ├── geckodriver@1.11.0
+264 silly idealTree ├── got@5.6.0
+264 silly idealTree ├── inherits@2.0.3
+264 silly idealTree ├── is-arrayish@0.2.1
+264 silly idealTree ├── is-plain-obj@1.1.0
+264 silly idealTree ├── is-redirect@1.0.0
+264 silly idealTree ├── is-retry-allowed@1.1.0
+264 silly idealTree ├── is-stream@1.1.0
+264 silly idealTree ├── isarray@1.0.0
+264 silly idealTree ├── js-tokens@4.0.0
+264 silly idealTree ├── lodash@4.17.10
+264 silly idealTree ├── loose-envify@1.4.0
+264 silly idealTree ├── lowercase-keys@1.0.1
+264 silly idealTree ├── minimist@0.0.8
+264 silly idealTree ├── minipass@2.3.3
+264 silly idealTree ├── minizlib@1.1.0
+264 silly idealTree ├── mkdirp@0.5.1
+264 silly idealTree ├── node-status-codes@1.0.0
+264 silly idealTree ├── object-assign@4.1.1
+264 silly idealTree ├── parse-json@2.2.0
+264 silly idealTree ├── pinkie-promise@2.0.1
+264 silly idealTree ├── pinkie@2.0.4
+264 silly idealTree ├── prepend-http@1.0.4
+264 silly idealTree ├── process-nextick-args@2.0.0
+264 silly idealTree ├── prop-types@15.6.2
+264 silly idealTree ├── read-all-stream@3.1.0
+264 silly idealTree ├── readable-stream@2.3.6
+264 silly idealTree ├── safe-buffer@5.1.2
+264 silly idealTree ├── string_decoder@1.1.1
+264 silly idealTree ├── tar@4.0.2
+264 silly idealTree ├── timed-out@2.0.0
+264 silly idealTree ├── unzip-response@1.0.2
+264 silly idealTree ├── url-parse-lax@1.0.0
+264 silly idealTree ├── util-deprecate@1.0.2
+264 silly idealTree └── yallist@3.0.2
+265 silly generateActionsToTake Starting
+266 silly install generateActionsToTake
+267 warn checkPermissions Missing write access to /home/pribytkovskiy/node_modules
+268 silly rollbackFailedOptional Starting
+269 silly rollbackFailedOptional Finishing
+270 silly runTopLevelLifecycles Finishing
+271 silly install printInstalled
+272 warn enoent ENOENT: no such file or directory, open '/home/pribytkovskiy/package.json'
+273 verbose enoent ENOENT: no such file or directory, open '/home/pribytkovskiy/package.json'
+273 verbose enoent This is most likely not a problem with npm itself
+273 verbose enoent and is related to npm not being able to find a file.
+274 warn cloudinary-react@1.0.6 requires a peer of react@^16.2.0 but none was installed.
+275 verbose If you need help, you may report this error at:
+275 verbose     <https://github.com/npm/npm/issues>
+276 warn pribytkovskiy No description
+277 verbose If you need help, you may report this error at:
+277 verbose     <https://github.com/npm/npm/issues>
+278 warn pribytkovskiy No repository field.
+279 verbose If you need help, you may report this error at:
+279 verbose     <https://github.com/npm/npm/issues>
+280 warn pribytkovskiy No README data
+281 verbose If you need help, you may report this error at:
+281 verbose     <https://github.com/npm/npm/issues>
+282 warn pribytkovskiy No license field.
+283 verbose If you need help, you may report this error at:
+283 verbose     <https://github.com/npm/npm/issues>
+284 verbose stack Error: EACCES: permission denied, access '/home/pribytkovskiy/node_modules'
+284 verbose stack     at Error (native)
+285 verbose cwd /home/pribytkovskiy/Рабочий стол/blog
+286 error Linux 4.13.0-31-generic
+287 error argv "/usr/bin/node" "/usr/bin/npm" "install" "cloudinary-react" "--save"
+288 error node v6.14.2
+289 error npm  v3.10.10
+290 error path /home/pribytkovskiy/node_modules
+291 error code EACCES
+292 error errno -13
+293 error syscall access
+294 error Error: EACCES: permission denied, access '/home/pribytkovskiy/node_modules'
+294 error     at Error (native)
+294 error  { Error: EACCES: permission denied, access '/home/pribytkovskiy/node_modules'
+294 error     at Error (native)
+294 error   errno: -13,
+294 error   code: 'EACCES',
+294 error   syscall: 'access',
+294 error   path: '/home/pribytkovskiy/node_modules' }
+295 error Please try running this command again as root/Administrator.
+296 verbose exit [ -13, true ]

@@ -12,7 +12,7 @@ export function getPosts(category_id) {
 }
 
 export function addNewPost(category_id, name, content, file) {
-  axios.post( '/api/v1/posts', { post: {category_id, name, content, file} })
+  axios.post( '/api/v1/posts', file , { headers: {'Content-Type': 'multipart/form-data' }})
   .then(response => {
     store.dispatch(setPostSuccess(response.data));
   })
