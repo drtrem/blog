@@ -1,24 +1,49 @@
-# README
+web: cd client && PORT=3000 npm start
+api: PORT=3001 && bundle exec rails s
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Загрузка файлов:
+gem 'carrierwave'
+gem 'cloudinary'
 
-Things you may want to cover:
+Тесты:
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
 
-* Ruby version
+Axios -  запросы
+Lodash – работа с массивами
+Формы – без redux-form
 
-* System dependencies
+Ruby on Rails + 
+React + Redux + 
+React-router + 
+WebSockets -
+Background jobs processing -
+Responsive front-end component library +
 
-* Configuration
+Не сделано:
+Комментарии – не успел
 
-* Database creation
+Не получилось:
+Не заработал вложенный маршрут:
+<Link className = "row justify-content-center" to = {`/category/${category.id }/posts/${post.id }`>
 
-* Database initialization
+  <Router history={browserHistory}>
+    <Route component={MainLayout}>
+      <Route path="/" component={Home} />
+      <Route path="categories">
+        <IndexRoute component={CategoriesContainer} />
+        <Route path=":categoryId" component={Category}>
+          <Route path="posts">
+            <IndexRoute component={PostsContainer} />
+            <Route path=":postId" component={Post} />
+          </Route>
+        </Route>
+      </Route>
+    </Route>
+  </Router>
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
