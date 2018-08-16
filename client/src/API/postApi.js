@@ -40,7 +40,7 @@ export function editingPost(id) {
   store.dispatch(editingPostSuccess(id));
 }
 
-  export  function validate (name, description) { 
+  export  function validate (name, description, files) { 
     const errors = [];
     if ( ( ((/(^)([A-ZА-Я][A-ZА-Яa-zа-я])/g).test(name)) ) === false ) {
       errors.push("Мінімум 2 слова по 2 літери, перше слово з великої літери");
@@ -58,5 +58,9 @@ export function editingPost(id) {
       errors.push("Має включати description");
     }
 
+    if (files.size > 2000000) {
+      errors.push("Має бути < 2000 MB");
+    }
+    console.log(files.size)
     return errors;
   }

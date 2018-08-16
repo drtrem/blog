@@ -8,6 +8,7 @@ class NewPostForm extends Component {
         name: '',
         content: '',
         file: null,
+        files: null,
         errors: []
       }
       this.handleChange = this.handleChange.bind(this)
@@ -20,7 +21,7 @@ class NewPostForm extends Component {
   handleSubmit(e){
     e.preventDefault();
     const { name, content, file } = this.state;
-    const errors = postApi.validate(this.state.name, this.state.content);
+    const errors = postApi.validate(this.state.name, this.state.content, this.state.files);
     if (errors.length > 0) {
       this.setState({ errors });
       return;
@@ -34,6 +35,7 @@ class NewPostForm extends Component {
   readFile(e){
     e.preventDefault()
     let fd = new FormData();
+    this.state.files = e.target.files[0]
     fd.append('file', e.target.files[0]);
     fd.append('name', this.state.name);
     fd.append('content', this.state.content);
