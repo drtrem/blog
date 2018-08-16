@@ -58,8 +58,11 @@ export function editingPost(id) {
       errors.push("Має включати description");
     }
 
-    if (files.size > 2000000) {
-      errors.push("Має бути < 2000 MB");
+    if (files == true) {
+      if (files.size > 2000000) {
+        errors.push("Має бути < 2000 MB");
+      }
     }
+
     return errors;
   }
