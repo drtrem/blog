@@ -1,5 +1,6 @@
 class Category < ApplicationRecord
   has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   validates :name, presence: true, format: { with: /(^)([A-ZА-Я][A-ZА-Яa-zа-я])/, message: "Мінімум 2 слова по 2 літери, перше слово з великої літери"}
   validates :name, format: { with: /\./, message: "Має включати ‘.’"}

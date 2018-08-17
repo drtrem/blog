@@ -19,6 +19,8 @@ class CategoriesContainer extends Component {
             removeCategory={categoryApi.removeCategory} 
             editCategory={categoryApi.editCategory} 
             editingCategory={categoryApi.editingCategory} />
+          <br/>
+          <span className = "row justify-content-center">Add Category:</span>
           <NewCategoryForm onNewCategory={categoryApi.addNewCategory} />
         </ul>
       </div>
