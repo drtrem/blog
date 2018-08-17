@@ -66,7 +66,7 @@ class EditPostForm extends Component {
             onChange={this.handleChange} 
             required></textarea>
           <br/>
-          <input type="file" className="form-control-file" id="exampleFormControlFile1" onChange={(e)=> { this.readFile(e) }} required></input>
+          <input type="file" className="form-control-file" id="exampleFormControlFile" onChange={(e)=> { this.readFile(e) }} required></input>
           <br/>
           <button className="form-control btn btn-primary">Update Post</button>
         </form> 

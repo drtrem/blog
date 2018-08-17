@@ -30,7 +30,7 @@ RSpec.describe Api::V1::PostsController, type: :controller do
     context 'with valid name' do
       it 'creates a post' do
         expect{
-          post :create, params: { post: attributes_for(:post, category_id: category.id) }, as: :json
+          post :create, params: attributes_for(:post, category_id: category.id) , as: :json
         }.to change(Post, :count).by(1)
       end
     end
@@ -52,11 +52,11 @@ RSpec.describe Api::V1::PostsController, type: :controller do
     context 'with valid name' do
       before(:each) do
         @post = create(:post)
-        @attributes = attributes_for(:post, name: 'New post name.')
+        @attributes = attributes_for(:post, name: 'New post name.', id: @post)
       end
 
       it 'changes a post name' do
-        patch :update, params: { id: @post, post: @attributes }, as: :json
+        patch :update, params: @attributes, as: :json
         expect(@post.reload.name).to eq @attributes[:name]
       end
 
@@ -70,16 +70,16 @@ RSpec.describe Api::V1::PostsController, type: :controller do
     context 'with invalid name' do
       before(:each) do
         @post = create(:post)
-        @attributes = attributes_for(:post, name: '')
+        @attributes = attributes_for(:post, name: '', id: @post)
       end
 
       it 'does not change a post name' do
-        patch :update, params: { id: @post, post: @attributes }, as: :json
+        patch :update, params: @attributes, as: :json
         expect(@post.reload.name).to_not eq @attributes[:name]
       end
 
       it 'returns an error' do
-        patch :update, params: { id: @post, post: @attributes }, as: :json
+        patch :update, params: @attributes, as: :json
         expect(response.status).to eq 422
       end
     end

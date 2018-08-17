@@ -71,6 +71,7 @@ feature 'Post', type: :feature, js: true do
     scenario 'edit post name' do 
       find('a', text: 'Edit').click
       find(:css, "input[value='New post name.']").set('Some original name.')
+      attach_file('exampleFormControlFile', File.absolute_path('./client/public/favicon.ico'))
       find('button', text: 'Update Post').click
 
       expect(page).to_not have_text('New post name.')
@@ -80,6 +81,7 @@ feature 'Post', type: :feature, js: true do
     scenario 'change post name to to is not eq regExp' do
       find('a', text: 'Edit').click
       find(:css, "input[value='New post name.']").set('Some original name')
+      attach_file('exampleFormControlFile', File.absolute_path('./client/public/favicon.ico'))
       find('button', text: 'Update Post').click
 
       expect(page).to have_text("Має включати ‘.’")

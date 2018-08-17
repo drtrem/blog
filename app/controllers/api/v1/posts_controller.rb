@@ -16,7 +16,6 @@ module Api::V1
 
     # POST /posts
     def create
-      puts post_params
       @post = Post.new(post_params)
 
       if @post.save

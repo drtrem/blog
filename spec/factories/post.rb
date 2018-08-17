@@ -3,8 +3,10 @@ FactoryGirl.define do
   factory :post do
     name                  'Test test.'
     content               'Test test.'
-    file                  "image/upload/v1534427732/qgpbliqwlbl7mgy2nkn3.png"
+    file                  { Rack::Test::UploadedFile.new(Rails.root.join('client/public/ONP.jpg'), 'image/jpeg') }
     category
   end
 
 end 
+
+
