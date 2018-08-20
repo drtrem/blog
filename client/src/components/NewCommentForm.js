@@ -6,7 +6,7 @@ class NewCommentForm extends Component {
     super(props)
     this.state = {
       author: '',
-      content: '',
+      contentComment: '',
       errors: [],
     }
     this.handleChange = this.handleChange.bind(this)
@@ -18,14 +18,14 @@ class NewCommentForm extends Component {
   }
   handleSubmit(e){
     e.preventDefault();
-    const errors = commentApi.validateComment(this.state.author, this.state.content);
+    const errors = commentApi.validateComment(this.state.author, this.state.ccontentComment);
     if (errors.length > 0) {
       this.setState({ errors });
       return;
     }
-    commentApi.addNewComment(this.props.categoryId, this.state.author, this.state.content);
+    commentApi.addNewComment(this.props.categoryId, this.state.author, this.state.contentComment);
     this.state.author = ''
-    this.state.content = ''
+    this.state.contentComment = ''
     this.state.errors = []
   }
   
@@ -43,12 +43,12 @@ class NewCommentForm extends Component {
             placeholder="Author..."
             value={this.state.author}
             onChange={this.handleChange} required/>
-          <textarea name="content" 
+          <textarea name="contentComment" 
             className="form-control" 
             id="exampleFormControlTextareaComment" 
             rows="3" 
             placeholder="Content..." 
-            value={this.state.content} 
+            value={this.state.contentComment} 
             onChange={this.handleChange} 
             required></textarea>
           <button className=" form-control btn btn-primary">Add Comment</button>
