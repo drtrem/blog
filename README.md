@@ -24,9 +24,6 @@ WebSockets -
 Background jobs processing -
 Responsive front-end component library +
 
-Не сделано:
-Комментарии – не успел
-
 Не получилось:
 Не заработал вложенный маршрут:
 <Link className = "row justify-content-center" to = {`/category/${category.id }/posts/${post.id }`>

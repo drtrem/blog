@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 class CommentList extends Component {
   render() {
-    console.log(this.props.comments)
     return (
       this.props.comments.map( comment => {
         return (
