@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   belongs_to :category
+  has_many :comments_post, dependent: :destroy
   mount_uploader :file, FileUploader
 
   validates :name, presence: true, format: { with: /(^)([A-ZА-Я][A-ZА-Яa-zа-я])/, message: "Мінімум 2 слова по 2 літери, перше слово з великої літери"}

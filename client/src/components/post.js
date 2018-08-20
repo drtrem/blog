@@ -1,19 +1,33 @@
 import React, { Component } from 'react';
+import CommentPostContainer from './commentsPost-container'; 
+import NewCommentPostForm from './NewCommentPostForm';
 
 class Post extends Component {
   render() {
     return (
-            <div className = "row justify-content-center" key={this.props.params.postId}>
-              <li className = "list-group-item col-xl-5">
-                <span className = "row justify-content-center">
-                  Post name:{this.props.params.postName}
-                </span>
-                <br/>
-                <span>Content: {this.props.params.postContent}</span>
-                <br/>
-                <span>Content: {this.props.params.postFile}</span>
-                <br/>
-              </li> 
+            <div key={this.props.params.postId}>
+              <div className = "row justify-content-center">
+                <li className = "list-group-item col-xl-6">
+                  <span className = "row justify-content-center">
+                    Post name:{this.props.params.postName}
+                  </span>
+                  <br/>
+                  <span>Content: {this.props.params.postContent}</span>
+                  <br/>
+                  <span>Content: {this.props.params.postFile}</span>
+                  <br/>
+                </li>
+              </div>
+              <div className = "row justify-content-center">
+                <div className = "list-group-item col-xl-6">
+                  <CommentPostContainer  
+                    postId={this.props.params.postId} 
+                    />
+                  <NewCommentPostForm  
+                    postId={this.props.params.postId}
+                    />
+                </div>
+              </div>
             </div>
       );
   }

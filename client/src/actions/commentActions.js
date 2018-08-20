@@ -13,3 +13,17 @@ export function setCommentSuccess(comment) {
     comment
   };
 }
+
+export function getCommentsPostsSuccess(comment) {
+  return {
+    type: types.GET_COMMENTSPOSTS_SUCCESS,
+    comment
+  };
+}
+
+export function setCommentsPostSuccess(comment) {
+  return {
+    type: types.SET_COMMENTSPOST_SUCCESS,
+    comment
+  };
+}

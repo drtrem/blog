@@ -4,6 +4,7 @@ Rails.application.routes.draw do
         resources :categories
         resources :posts
         resources :comments
+        resources :commentsposts
       end
   end
   get '*path', to: "application#fallback_index_html", constraints: ->(request) do

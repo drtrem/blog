@@ -1,7 +1,8 @@
 import * as types from '../actions/actionTypes';
 
 const initialState = {
-  comments: []
+  comments: [],
+  commentsposts: []
 };
 
 const commentReducer = function(state = initialState, action) {
@@ -13,6 +14,12 @@ const commentReducer = function(state = initialState, action) {
 
     case types.SET_COMMENT_SUCCESS:
       return {...state, comments: [ ...state.comments, action.comment ]}
+
+    case types.GET_COMMENTSPOSTS_SUCCESS:
+      return Object.assign({}, state, { commentsposts: action.comment } );
+
+    case types.SET_COMMENTSPOST_SUCCESS:
+      return {...state, commentsposts: [ ...state.commentsposts, action.comment ]}
 
     default: return state;
   }
