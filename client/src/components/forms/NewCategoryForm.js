@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import * as commentApi from '../API/commentApi';
+import * as postApi from '../../API/postApi';
 
-class NewCommentPostForm extends Component {
+class NewCategoryForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      author: '',
-      content: '',
+      name: '',
+      description: '',
       errors: [],
     }
     this.handleChange = this.handleChange.bind(this)
@@ -18,14 +18,14 @@ class NewCommentPostForm extends Component {
   }
   handleSubmit(e){
     e.preventDefault();
-    const errors = commentApi.validateComment(this.state.author, this.state.content);
+    const errors = postApi.validate(this.state.name, this.state.description);
     if (errors.length > 0) {
       this.setState({ errors });
       return;
     }
-    commentApi.addNewCommentPost(this.props.postId, this.state.author, this.state.content);
-    this.state.author = ''
-    this.state.content = ''
+    this.props.onNewCategory(this.state.name, this.state.description);
+    this.state.name = ''
+    this.state.description = ''
     this.state.errors = []
   }
   
@@ -37,25 +37,25 @@ class NewCommentPostForm extends Component {
           {errors.map(error => (
             <p className='text-danger' key={error}>Error: {error}</p>
           ))}
-          <input name="author"
+          <input name="name"
             className = "form-control"
             type="text"
-            placeholder="Author..."
-            value={this.state.author}
+            placeholder="Name..."
+            value={this.state.name}
             onChange={this.handleChange} required/>
-          <textarea name="content" 
+          <textarea name="description" 
             className="form-control" 
-            id="exampleFormControlTextareaComment" 
+            id="exampleFormControlTextarea1" 
             rows="3" 
-            placeholder="Content..." 
-            value={this.state.content} 
+            placeholder="Description..." 
+            value={this.state.description} 
             onChange={this.handleChange} 
             required></textarea>
-          <button className=" form-control btn btn-primary">Add Comment Post</button>
+          <button className=" form-control btn btn-primary">Add Category</button>
         </form> 
       </div>
     )
   }
 }
 
-export default NewCommentPostForm;
+export default NewCategoryForm;

@@ -1,32 +1,31 @@
-import React, { Component } from 'react'; 
-import * as postApi from '../API/postApi';
+import React, { Component } from 'react';
+import * as commentApi from '../../API/commentApi';
 
-class EditCategoryForm extends Component {
+class NewCommentPostForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      id: this.props.category.id,
-      name: this.props.category.name,
-      description: this.props.category.description,
-      errors: []
+      author: '',
+      content: '',
+      errors: [],
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
+
   handleChange = (e) => {
     this.setState({[e.target.name]: e.target.value})
   }
   handleSubmit(e){
     e.preventDefault();
-    const { id, name, description } = this.state;
-    const errors = postApi.validate(this.state.name, this.state.description);
+    const errors = commentApi.validateComment(this.state.author, this.state.content);
     if (errors.length > 0) {
       this.setState({ errors });
       return;
     }
-    this.props.editCategory(id, name, description);
-    this.state.name = ''
-    this.state.description = ''
+    commentApi.addNewCommentPost(this.props.postId, this.state.author, this.state.content);
+    this.state.author = ''
+    this.state.content = ''
     this.state.errors = []
   }
   
@@ -38,26 +37,25 @@ class EditCategoryForm extends Component {
           {errors.map(error => (
             <p className='text-danger' key={error}>Error: {error}</p>
           ))}
-          <input name="name"
+          <input name="author"
             className = "form-control"
             type="text"
-            placeholder="Name..."
-            value={this.state.name}
+            placeholder="Author..."
+            value={this.state.author}
             onChange={this.handleChange} required/>
-          <textarea name="description" 
+          <textarea name="content" 
             className="form-control" 
-            id="exampleFormControlTextarea1" 
+            id="exampleFormControlTextareaComment" 
             rows="3" 
-            placeholder="Description..." 
-            value={this.state.description} 
+            placeholder="Content..." 
+            value={this.state.content} 
             onChange={this.handleChange} 
             required></textarea>
-          <button className=" form-control btn btn-primary">Update Category</button>
+          <button className=" form-control btn btn-primary">Add Comment Post</button>
         </form> 
       </div>
     )
   }
 }
 
-export default EditCategoryForm;
- 
+export default NewCommentPostForm;

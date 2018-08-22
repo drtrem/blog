@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as postApi from '../API/postApi';
+import * as postApi from '../../API/postApi';
 
 class NewPostForm extends Component {
   constructor(props) {

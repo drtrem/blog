@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CommentPostContainer from './commentsPost-container'; 
-import NewCommentPostForm from './NewCommentPostForm';
+import CommentPostContainer from '../containers/commentsPost-container'; 
+import NewCommentPostForm from '../forms/NewCommentPostForm';
 
 class Post extends Component {
   render() {

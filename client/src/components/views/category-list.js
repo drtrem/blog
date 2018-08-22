@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import EditCategoryForm from './EditCategoryForm';
+import EditCategoryForm from '../forms/EditCategoryForm';
 
 class CategoryList extends Component {
   render() {

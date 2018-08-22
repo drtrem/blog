@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import CommentList from './comment-list'
-import NewCommentForm from './NewCommentForm';
-import * as commentApi from '../API/commentApi';
+import CommentList from '../views/comment-list'
+import NewCommentForm from '../forms/NewCommentForm';
+import * as commentApi from '../../API/commentApi';
 
 class CommentContainer extends Component {
   componentDidMount() {

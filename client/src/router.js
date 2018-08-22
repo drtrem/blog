@@ -6,11 +6,11 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import MainLayout from './components/main-layout';
 
 // Pages
-import Home from './components/home';
-import CategoriesContainer from './components/category-container';
-import Category from './components/category';
-import PostsContainer from './components/post-container';
-import Post from './components/post';
+import Home from './components/views/home';
+import CategoriesContainer from './components/containers/category-container';
+import Category from './components/views/category';
+import PostsContainer from './components/containers/post-container';
+import Post from './components/views/post';
 
 const Routers = () => (
 

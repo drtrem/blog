@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PostsContainer from './post-container';
+import PostsContainer from '../containers/post-container';
 
 class Category extends Component {
 

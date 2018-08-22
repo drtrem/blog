@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import EditPostForm from './EditPostForm';
-import * as postApi from '../API/postApi';
+import EditPostForm from '../forms/EditPostForm';
+import * as postApi from '../../API/postApi';
 import { Link } from 'react-router';
 
 class PostList extends Component {

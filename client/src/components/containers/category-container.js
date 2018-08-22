@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import CategoryList from '../components/category-list';
-import NewCategoryForm from '../components/NewCategoryForm';
-import * as categoryApi from '../API/categoryApi';
+import CategoryList from '../views/category-list';
+import NewCategoryForm from '../forms/NewCategoryForm';
+import * as categoryApi from '../../API/categoryApi';
 
 class CategoriesContainer extends Component {
   componentDidMount() {

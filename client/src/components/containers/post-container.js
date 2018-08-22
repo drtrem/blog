@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PostList from './post-list';
-import NewPostForm from './NewPostForm';
-import * as postApi from '../API/postApi';
+import PostList from '../views/post-list';
+import NewPostForm from '../forms/NewPostForm';
+import * as postApi from '../../API/postApi';
 
 import CommentContainer from './comment-container';
 
